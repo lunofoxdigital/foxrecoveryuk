@@ -11,22 +11,31 @@
 
     <!-- Navigation Header -->
     <header>
+    <!-- 1. Centered Logo (Scrolls away) -->
+    <div class="logo-wrapper">
+        <a href="index.html" class="brand-logo-link">
+            <img src="images/TopLogo.png" class="nav-logo" alt="Fox Recovery Logo">
+        </a>
+    </div>
+
+    <!-- 2. Sticky Navigation Bar -->
+    <nav class="sticky-nav">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo-link">
-                <!-- Ensure this matches your actual logo filename -->
-                <img src="images/TopLogo.png" alt="Fox Recovery" class="nav-logo">
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="policy.html">Policy</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://foxrecoveryuk.janeapp.co.uk/" class="btn-book" target="_blank" rel="noopener">Book Now</a></li>
-                </ul>
-            </nav>
+            <!-- Main Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="policy.html">Policy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Book Now Button (Underneath) -->
+            <div class="book-btn-wrapper">
+                <a href="https://foxrecoveryuk.janeapp.co.uk/" class="btn-book" target="_blank">Book Now</a>
+            </div>
         </div>
-    </header>
+    </nav>
+</header>
 
     <!-- Main Content -->
     <main style="max-width: 800px; margin: 2rem auto; padding: 0 1.5rem;">

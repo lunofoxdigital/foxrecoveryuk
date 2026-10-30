@@ -223,9 +223,10 @@ main a:hover {
 }
 
 .carousel-track img {
-    width: 100%;
-    height: auto;
-    display: block;
+  display: block;
+  max-height: 80px; /* Set your preferred max logo/icon height */
+  width: auto;
+  object-fit: contain;
 }
 
 /* Added missing keyframes for index carousel */

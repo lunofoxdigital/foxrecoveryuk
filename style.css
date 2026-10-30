@@ -218,8 +218,8 @@ main a:hover {
 }
 
 .carousel-track a {
-    width: 25%;
-    display: block;
+  flex: 0 0 auto; /* Keeps each item at its full natural width */
+  display: inline-block;
 }
 
 .carousel-track img {

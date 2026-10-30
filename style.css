@@ -20,7 +20,7 @@
     --font-stack: 'LeagueSpartan', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Universal Box Reset (Fixed symbol bug) */
+/* Universal Box Reset (Fixed selector bug) */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -224,7 +224,6 @@ main a:hover {
     box-sizing: border-box;
 }
 
-/* FIX: Removes 80px cap and forces full slide fill */
 .carousel-track img {
     width: 100%;
     height: auto;
@@ -240,44 +239,39 @@ main a:hover {
 }
 
 /* ==========================================
-   5. ABOUT PAGE: SPLIT DESIGN & CAROUSEL
+   5. ABOUT PAGE: VERTICAL CENTERED LAYOUT
    ========================================== */
 .about-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 2rem 1.5rem;
 }
 
-.about-text h2 {
-    text-align: center;    
-    color: #ffffff;
+/* Header Section */
+.about-header h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
 }
 
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+.about-subtitle {
+    color: #000000;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-/* Consolidated wrapper */
+/* Floating Image & Glow Container */
 .about-image-wrapper {
     position: relative;
-    max-width: 400px;
-    margin: 0 auto;
     width: 100%;
-}
-
-.about-image {
-    width: 100%;
-    border-radius: 20px;
-    position: relative;
-    z-index: 2;
-    display: block;
-    animation: levitate 6s ease-in-out infinite;
+    max-width: 420px;
+    margin: 0 auto 2.5rem auto;
 }
 
 .about-carousel-container {
@@ -287,6 +281,7 @@ main a:hover {
     border-radius: 20px;
     overflow: hidden;
     animation: levitate 6s ease-in-out infinite;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .about-carousel-track {
@@ -318,6 +313,15 @@ main a:hover {
     animation: pulseGlow 3s ease-in-out infinite;
 }
 
+/* White Paragraph Text */
+.about-body-text p {
+    color: #ffffff;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
 /* About Page Animations */
 @keyframes levitate {
     0% { transform: translateY(0px); }
@@ -341,20 +345,18 @@ main a:hover {
 /* ==========================================
    6. GOOGLE MAP EMBED
    ========================================== */
-/* 1. Styled container box */
 .map-container {
     width: 100%;
-    height: 450px; /* Set your desired overall map box height */
-    border: 2px solid #d35400; /* Your orange border color */
+    height: 450px;
+    border: 2px solid #d35400;
     border-radius: 12px;
-    overflow: hidden; /* Clips the map corners to match the rounded border */
+    overflow: hidden;
 }
 
-/* 2. Force iframe to fill the entire container */
 .map-container iframe {
     width: 100%;
     height: 100%;
-    display: block; /* Prevents inline spacing gaps at the bottom */
+    display: block;
     border: 0;
 }
 
@@ -388,17 +390,6 @@ footer {
 /* ==========================================
    8. MEDIA QUERIES
    ========================================== */
-@media (min-width: 768px) {
-    .about-hero {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .about-image-wrapper, .about-text {
-        width: 50%;
-    }
-}
-
 @media (max-width: 768px) {
     .hero-banner-img {
         height: 250px; 

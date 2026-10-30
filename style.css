@@ -55,17 +55,18 @@ header {
     width: 100%;
 }
 
-/* Logo Section - Scrolls with page */
+/* 1. Centered Logo Section */
 .logo-wrapper {
-    text-align: center;
-    padding: 1.25rem 1.5rem 0.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
 }
 
 .nav-logo {
     max-height: 180px;
     width: auto;
     display: block;
-    margin: 0 auto;
 }
 
 .brand-logo-link {
@@ -77,25 +78,33 @@ header {
     opacity: 0.8;
 }
 
-/* Sticky Navigation Bar - Locks to top */
+/* 2. Sticky Navigation Container */
 .sticky-nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: #1F1F1F; /* Dark background so content doesn't show through */
+    background-color: #1F1F1F;
     border-bottom: 1px solid var(--border-color);
     padding: 0.8rem 1.5rem;
 }
 
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem; /* Space between links row and Book Now button */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Nav Links Row */
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -111,13 +120,21 @@ header {
     color: var(--accent-color);
 }
 
+/* Book Now Button Row */
+.book-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .btn-book {
     background: var(--accent-color);
     color: #ffffff !important;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 1.4rem;
     border-radius: 8px;
     font-weight: 600;
     transition: background 0.2s ease;
+    display: inline-block;
 }
 
 .btn-book:hover {

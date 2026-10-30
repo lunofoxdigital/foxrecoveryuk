@@ -20,6 +20,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: fox-recovery-uk # Matches your exact Cloudflare Pages project name
+          projectName: foxrecoveryuk # Matches your exact Cloudflare Pages project name
           directory: . # Uploads root folder with index.html
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

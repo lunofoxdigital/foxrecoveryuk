@@ -52,28 +52,20 @@ a:hover {
    ========================================== */
 header {
     background-color: #1F1F1F;
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    width: 100%;
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
+/* Logo Section - Scrolls with page */
+.logo-wrapper {
     text-align: center;
+    padding: 1.25rem 1.5rem 0.5rem 1.5rem;
 }
 
 .nav-logo {
     max-height: 180px;
     width: auto;
     display: block;
+    margin: 0 auto;
 }
 
 .brand-logo-link {
@@ -85,6 +77,16 @@ header {
     opacity: 0.8;
 }
 
+/* Sticky Navigation Bar - Locks to top */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #1F1F1F; /* Dark background so content doesn't show through */
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 1.5rem;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -92,13 +94,8 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.nav-links li:last-child {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 0rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .nav-links a {
@@ -117,7 +114,7 @@ header {
 .btn-book {
     background: var(--accent-color);
     color: #ffffff !important;
-    padding: 0.8rem 0.8rem;
+    padding: 0.6rem 1rem;
     border-radius: 8px;
     font-weight: 600;
     transition: background 0.2s ease;
